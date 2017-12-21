@@ -5,8 +5,8 @@ RSpec.describe Darkstore::Auth, vcr: true do
 
   describe '#login' do
     context "with valid credentials" do
-      let(:email)    { "user@darkstore.com" }
-      let(:password) { "password" }
+      let(:email)    { "test@brand.com" }
+      let(:password) { "test" }
 
       it "returns darkstore token" do
         expect(subject.ok?).to be_truthy
