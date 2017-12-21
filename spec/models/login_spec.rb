@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-RSpec.describe Darkstore::Auth, type: :feature, vcr: true do
+RSpec.describe Darkstore::Auth, vcr: true do
   subject { described_class.new.login(email, password) }
 
   describe '#login' do
