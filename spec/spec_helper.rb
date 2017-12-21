@@ -1,5 +1,11 @@
 require "bundler/setup"
+
+# Environment
+ENV['RAILS_ENV'] = 'test'
+
 require "darkstore"
+
+Dir[File.join(File.dirname(__FILE__), 'support/**/*.rb')].each { |f| require f }
 
 RSpec.configure do |config|
   # Enable flags like --only-failures and --next-failure
