@@ -7,7 +7,7 @@ module Darkstore
       params[:order] = { zip: zip } unless zip.nil?
       params[:cart] = cart unless cart.nil?
 
-      request(:get, 'delivery_rates', params: params)
+      request(:get, 'delivery_rates', params: parse_json(params))
     end
   end
 end

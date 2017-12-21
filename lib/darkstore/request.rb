@@ -4,7 +4,7 @@ module Darkstore
       new(**args).send
     end
 
-    attr_reader :method, :path, :body
+    attr_reader :method, :path, :params, :body
 
     def initialize(method: :get, path: '', params: {}, body: {})
       @method = method
@@ -44,10 +44,6 @@ module Darkstore
 
     def base_url
       Darkstore.configuration.endpoint.chomp("/")
-    end
-
-    def params
-      @params.transform_values(&:to_json)
     end
 
     def token
