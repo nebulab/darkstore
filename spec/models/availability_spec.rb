@@ -6,8 +6,8 @@ RSpec.describe Darkstore::Availability, vcr: true do
 
     it "returns darkstore rates" do
       expect(subject.ok?).to be_truthy
-      expect(subject.body).to be_any
-      expect(subject.body.first).to include 'id'
+      expect(subject.json_response).to be_any
+      expect(subject.json_response.first).to include 'id'
     end
 
     context "when zip have not sku related" do
