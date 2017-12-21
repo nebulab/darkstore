@@ -1,0 +1,57 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://www.darkstore.com/v1/api/login
+    body:
+      encoding: UTF-8
+      string: '{"email":"<email>","password":"<password>"}'
+    headers:
+      Authorization:
+      - "<Authorization Code>"
+      User-Agent:
+      - Faraday v0.13.1
+      Content-Type:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Thu, 21 Dec 2017 09:33:09 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Set-Cookie:
+      - __cfduid=d170614634911335c1ab4675e9bf49f911513848789; expires=Fri, 21-Dec-18
+        09:33:09 GMT; path=/; domain=.darkstore.com; HttpOnly; Secure
+      X-Powered-By:
+      - Express
+      Access-Control-Allow-Origin:
+      - "*"
+      Etag:
+      - W/"b2-k697HPP6hXjaJ/bzFFzRMjU5jE8"
+      Vary:
+      - Accept-Encoding
+      Via:
+      - 1.1 google
+      Alt-Svc:
+      - clear
+      Server:
+      - cloudflare-nginx
+      Cf-Ray:
+      - 3d09d697483f6f6c-FCO
+    body:
+      encoding: UTF-8
+      string: '{"darkstoreToken":"<darkstoreToken>"}'
+    http_version: 
+  recorded_at: Thu, 21 Dec 2017 09:33:08 GMT
+recorded_with: VCR 4.0.0

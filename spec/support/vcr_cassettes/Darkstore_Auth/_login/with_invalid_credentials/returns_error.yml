@@ -1,0 +1,55 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://www.darkstore.com/v1/api/login
+    body:
+      encoding: UTF-8
+      string: '{"email":"<email>","password":"<password>"}'
+    headers:
+      Authorization:
+      - "<Authorization Code>"
+      User-Agent:
+      - Faraday v0.13.1
+      Content-Type:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 500
+      message: Internal Server Error
+    headers:
+      Date:
+      - Thu, 21 Dec 2017 09:30:45 GMT
+      Content-Type:
+      - text/html; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Set-Cookie:
+      - __cfduid=d3b0c302231e8e14ad8328e9654b2b3b61513848645; expires=Fri, 21-Dec-18
+        09:30:45 GMT; path=/; domain=.darkstore.com; HttpOnly; Secure
+      X-Powered-By:
+      - Express
+      Access-Control-Allow-Origin:
+      - "*"
+      Vary:
+      - Accept-Encoding
+      Via:
+      - 1.1 google
+      Alt-Svc:
+      - clear
+      Server:
+      - cloudflare-nginx
+      Cf-Ray:
+      - 3d09d3105b776f4e-FCO
+    body:
+      encoding: UTF-8
+      string: Invalid email/password combination
+    http_version: 
+  recorded_at: Thu, 21 Dec 2017 09:30:43 GMT
+recorded_with: VCR 4.0.0
