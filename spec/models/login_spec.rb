@@ -1,7 +1,7 @@
 require 'spec_helper'
 
 RSpec.describe Darkstore::Auth, vcr: true do
-  subject { described_class.new.login(email, password) }
+  subject { described_class.new.login(email: email, password: password) }
 
   describe '#login' do
     context "with valid credentials" do
