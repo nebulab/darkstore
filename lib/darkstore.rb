@@ -6,8 +6,6 @@ require "recursive_open_struct"
 require "darkstore/configuration"
 require "darkstore/response"
 require "darkstore/request"
-require "darkstore/utility"
-require "darkstore/param_converter"
 require "darkstore/api"
 require "darkstore/auth"
 

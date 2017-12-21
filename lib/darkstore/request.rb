@@ -47,7 +47,7 @@ module Darkstore
     end
 
     def params
-      Utility.camel_case(@params)
+      @params.transform_values { |v| v.to_json }
     end
 
     def token
