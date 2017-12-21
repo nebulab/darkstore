@@ -25,7 +25,10 @@ VCR.configure do |c|
 
   c.filter_sensitive_data('<darkstoreToken>') do |interaction|
     begin
-      JSON.parse(interaction.response.body)['darkstoreToken'] if interaction.response.status.code == 200
+      if interaction.response.status.code == 200
+        hash_response = JSON.parse(interaction.response.body)
+        hash_response['darkstoreToken'] if hash_response.is_a? Hash
+      end
     rescue JSON::ParserError
       nil
     end
