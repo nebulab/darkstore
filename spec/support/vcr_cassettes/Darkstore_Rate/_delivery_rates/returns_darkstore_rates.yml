@@ -21,7 +21,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Thu, 21 Dec 2017 11:55:44 GMT
+      - Thu, 21 Dec 2017 15:18:54 GMT
       Content-Type:
       - application/json; charset=utf-8
       Transfer-Encoding:
@@ -29,8 +29,8 @@ http_interactions:
       Connection:
       - keep-alive
       Set-Cookie:
-      - __cfduid=dee40cf3b9fc647ec72a54796b911f6951513857343; expires=Fri, 21-Dec-18
-        11:55:43 GMT; path=/; domain=.darkstore.com; HttpOnly; Secure
+      - __cfduid=d047e4f0fe29075f1db54c1691bc6f7a31513869533; expires=Fri, 21-Dec-18
+        15:18:53 GMT; path=/; domain=.darkstore.com; HttpOnly; Secure
       X-Powered-By:
       - Express
       Access-Control-Allow-Origin:
@@ -46,11 +46,11 @@ http_interactions:
       Server:
       - cloudflare-nginx
       Cf-Ray:
-      - 3d0aa76fad656f42-FCO
+      - 3d0bd10a88786f24-FCO
     body:
       encoding: UTF-8
       string: '{"rates":[{"delivery":"Same Day","carrier":"TForce","service":"SameDayWhiteGlove","rate":31.95,"delivery_date":"12/21","order_date":"2017-12-21T00:00:00+00:00","priority":2,"darkstore_location":"Boston","darkstore_id":14},{"delivery":"Same
         Day","carrier":"TForce","service":"SameDay","rate":21.95,"delivery_date":"12/21","order_date":"2017-12-21T00:00:00+00:00","priority":2,"darkstore_location":"Boston","darkstore_id":14}]}'
     http_version: 
-  recorded_at: Thu, 21 Dec 2017 11:55:44 GMT
+  recorded_at: Thu, 21 Dec 2017 15:18:54 GMT
 recorded_with: VCR 4.0.0

@@ -23,7 +23,7 @@ http_interactions:
       message: Internal Server Error
     headers:
       Date:
-      - Thu, 21 Dec 2017 09:30:45 GMT
+      - Thu, 21 Dec 2017 15:18:53 GMT
       Content-Type:
       - text/html; charset=utf-8
       Transfer-Encoding:
@@ -31,8 +31,8 @@ http_interactions:
       Connection:
       - keep-alive
       Set-Cookie:
-      - __cfduid=d3b0c302231e8e14ad8328e9654b2b3b61513848645; expires=Fri, 21-Dec-18
-        09:30:45 GMT; path=/; domain=.darkstore.com; HttpOnly; Secure
+      - __cfduid=da5f1ae92f48ad0808d0b9d6c8c8e2ea51513869532; expires=Fri, 21-Dec-18
+        15:18:52 GMT; path=/; domain=.darkstore.com; HttpOnly; Secure
       X-Powered-By:
       - Express
       Access-Control-Allow-Origin:
@@ -46,10 +46,10 @@ http_interactions:
       Server:
       - cloudflare-nginx
       Cf-Ray:
-      - 3d09d3105b776f4e-FCO
+      - 3d0bd104c9556f42-FCO
     body:
       encoding: UTF-8
       string: Invalid email/password combination
     http_version: 
-  recorded_at: Thu, 21 Dec 2017 09:30:43 GMT
+  recorded_at: Thu, 21 Dec 2017 15:18:53 GMT
 recorded_with: VCR 4.0.0

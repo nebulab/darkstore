@@ -1,0 +1,61 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://www.darkstore.com/v1/api/skus?zip=10001
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Authorization:
+      - "<Authorization Code>"
+      User-Agent:
+      - Faraday v0.13.1
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Thu, 21 Dec 2017 15:18:53 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Set-Cookie:
+      - __cfduid=d652fdc986558b79211cf33a9e44e0d3e1513869533; expires=Fri, 21-Dec-18
+        15:18:53 GMT; path=/; domain=.darkstore.com; HttpOnly; Secure
+      X-Powered-By:
+      - Express
+      Access-Control-Allow-Origin:
+      - "*"
+      Etag:
+      - W/"821-RwXLNJN3w9QSVLsHSqF294eIE5c"
+      Vary:
+      - Accept-Encoding
+      Via:
+      - 1.1 google
+      Alt-Svc:
+      - clear
+      Server:
+      - cloudflare-nginx
+      Cf-Ray:
+      - 3d0bd106cbcb6f30-FCO
+    body:
+      encoding: UTF-8
+      string: '[{"id":918,"sku":"TESTSKU1","title":"Test Sku 1","images":"[{\"url\":\"https://res.cloudinary.com/darkstore/image/upload/v1507658714/svm2pke17jkgmmvx97q9.jpg\",\"mime\":\"jpg\",\"height\":854,\"width\":1280}]","upc":"100000001","price":{"amount":10,"currency":"usd"},"color":null,"size":null,"archived":false,"bundle":false,"available":994},{"id":919,"sku":"TESTSKU2","title":"Test
+        SKU 2","images":"[{\"url\":\"https://res.cloudinary.com/darkstore/image/upload/v1507658747/btdrowy0npctla5khgrb.jpg\",\"mime\":\"jpg\",\"height\":854,\"width\":1280}]","upc":"100000002","price":{"amount":10,"currency":"usd"},"color":null,"size":null,"archived":false,"bundle":false,"available":994},{"id":920,"sku":"TESTSKUBUNDLE1","title":"Test
+        SKU Bundle 1","images":"[{\"url\":\"https://res.cloudinary.com/darkstore/image/upload/v1507658780/per4tenotxyam6err2ws.jpg\",\"mime\":\"jpg\",\"height\":854,\"width\":1280}]","upc":"100000003","price":{"amount":10,"currency":"usd"},"color":null,"size":null,"archived":false,"bundle":true,"available":994,"bundled_skus":[{"id":918,"sku":"TESTSKU1","title":"Test
+        Sku 1","images":"[{\"url\":\"https://res.cloudinary.com/darkstore/image/upload/v1507658714/svm2pke17jkgmmvx97q9.jpg\",\"mime\":\"jpg\",\"height\":854,\"width\":1280}]","upc":"100000001","price":{"amount":10,"currency":"usd"},"color":null,"size":null,"archived":false,"bundle":false},{"id":919,"sku":"TESTSKU2","title":"Test
+        SKU 2","images":"[{\"url\":\"https://res.cloudinary.com/darkstore/image/upload/v1507658747/btdrowy0npctla5khgrb.jpg\",\"mime\":\"jpg\",\"height\":854,\"width\":1280}]","upc":"100000002","price":{"amount":10,"currency":"usd"},"color":null,"size":null,"archived":false,"bundle":false}]},{"id":24,"sku":"Queen
+        TN23Q","title":null,"images":null,"upc":"8514740050734","price":{"amount":600,"currency":"usd"},"color":null,"size":null,"archived":false,"bundle":false,"available":100},{"id":25,"sku":"King
+        TN23K","title":null,"images":null,"upc":"8514740050802","price":{"amount":750,"currency":"usd"},"color":null,"size":null,"archived":false,"bundle":false,"available":100}]'
+    http_version: 
+  recorded_at: Thu, 21 Dec 2017 15:18:53 GMT
+recorded_with: VCR 4.0.0

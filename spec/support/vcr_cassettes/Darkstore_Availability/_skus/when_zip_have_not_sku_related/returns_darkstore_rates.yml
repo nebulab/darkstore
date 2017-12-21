@@ -1,29 +1,27 @@
 ---
 http_interactions:
 - request:
-    method: post
-    uri: https://www.darkstore.com/v1/api/login
+    method: get
+    uri: https://www.darkstore.com/v1/api/skus?zip=99999
     body:
-      encoding: UTF-8
-      string: '{"email":"<email>","password":"<password>"}'
+      encoding: US-ASCII
+      string: ''
     headers:
       Authorization:
       - "<Authorization Code>"
       User-Agent:
       - Faraday v0.13.1
-      Content-Type:
-      - application/json
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
       Accept:
       - "*/*"
   response:
     status:
-      code: 200
-      message: OK
+      code: 404
+      message: Not Found
     headers:
       Date:
-      - Thu, 21 Dec 2017 15:18:52 GMT
+      - Thu, 21 Dec 2017 15:18:53 GMT
       Content-Type:
       - application/json; charset=utf-8
       Transfer-Encoding:
@@ -31,14 +29,14 @@ http_interactions:
       Connection:
       - keep-alive
       Set-Cookie:
-      - __cfduid=d4dae5ad3339039e0f9d82d52e36b81141513869532; expires=Fri, 21-Dec-18
-        15:18:52 GMT; path=/; domain=.darkstore.com; HttpOnly; Secure
+      - __cfduid=d9fbc316fed0f3ed859626420ce6624d31513869533; expires=Fri, 21-Dec-18
+        15:18:53 GMT; path=/; domain=.darkstore.com; HttpOnly; Secure
       X-Powered-By:
       - Express
       Access-Control-Allow-Origin:
       - "*"
       Etag:
-      - W/"b0-bWG/MGcpi9FeXd0HAoF561ePFSY"
+      - W/"30-2k51t5sJhvZJJ+qSxtXnfWVz25E"
       Vary:
       - Accept-Encoding
       Via:
@@ -48,10 +46,10 @@ http_interactions:
       Server:
       - cloudflare-nginx
       Cf-Ray:
-      - 3d0bd102ab4f6f36-FCO
+      - 3d0bd1085b577105-FCO
     body:
-      encoding: UTF-8
-      string: '{"darkstoreToken":"<darkstoreToken>"}'
+      encoding: ASCII-8BIT
+      string: '{"message":"No darkstore delivers to this zip."}'
     http_version: 
-  recorded_at: Thu, 21 Dec 2017 15:18:52 GMT
+  recorded_at: Thu, 21 Dec 2017 15:18:53 GMT
 recorded_with: VCR 4.0.0
