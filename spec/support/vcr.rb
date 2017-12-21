@@ -8,15 +8,27 @@ VCR.configure do |c|
   c.allow_http_connections_when_no_cassette = true
 
   c.filter_sensitive_data('<email>') do |interaction|
-    JSON.parse(interaction.request.body)['email']
+    begin
+      JSON.parse(interaction.request.body)['email']
+    rescue JSON::ParserError
+      nil
+    end
   end
 
   c.filter_sensitive_data('<password>') do |interaction|
-    JSON.parse(interaction.request.body)['password']
+    begin
+      JSON.parse(interaction.request.body)['password']
+    rescue JSON::ParserError
+      nil
+    end
   end
 
   c.filter_sensitive_data('<darkstoreToken>') do |interaction|
-    JSON.parse(interaction.response.body)['darkstoreToken'] if interaction.response.status.code == 200
+    begin
+      JSON.parse(interaction.response.body)['darkstoreToken'] if interaction.response.status.code == 200
+    rescue JSON::ParserError
+      nil
+    end
   end
 
   c.filter_sensitive_data('<Authorization Code>') do |interaction|
