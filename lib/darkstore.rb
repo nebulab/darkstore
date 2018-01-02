@@ -10,6 +10,7 @@ require "darkstore/api"
 require "darkstore/auth"
 require "darkstore/rate"
 require "darkstore/availability"
+require "darkstore/orders"
 
 module Darkstore
   class << self
