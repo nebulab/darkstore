@@ -6,12 +6,17 @@ module Darkstore
 
     def initialize(underlying_response: nil, error_summary: nil)
       @response = underlying_response
-      @body = underlying_response.body
+
       @error_summary = error_summary
+      @body = if error_summary.nil?
+                underlying_response.body
+              else
+                { error: error_summary }.to_json
+              end
     end
 
     def ok?
-      response.status == 200
+      !response.nil? && response.status == 200
     end
 
     def json_response
