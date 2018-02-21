@@ -1,0 +1,111 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://www.darkstore.com/v1/api/delivery_rates?cart=%7B%22FB-FBQ0%22:1%7D&order=%7B%22zip%22:%2202108%22%7D&product_name=true
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Authorization:
+      - "<Authorization Code>"
+      User-Agent:
+      - Faraday v0.14.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 401
+      message: Unauthorized
+    headers:
+      Date:
+      - Wed, 21 Feb 2018 15:48:48 GMT
+      Content-Type:
+      - text/html; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Set-Cookie:
+      - __cfduid=dd1b7c9219000f2562fc693d64bd093851519228128; expires=Thu, 21-Feb-19
+        15:48:48 GMT; path=/; domain=.darkstore.com; HttpOnly; Secure
+      X-Powered-By:
+      - Express
+      Access-Control-Allow-Origin:
+      - "*"
+      Vary:
+      - Accept-Encoding
+      Via:
+      - 1.1 google
+      Alt-Svc:
+      - clear
+      Expect-Ct:
+      - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 3f0ada193af03dbf-MXP
+    body:
+      encoding: UTF-8
+      string: Invalid token
+    http_version: 
+  recorded_at: Wed, 21 Feb 2018 15:48:48 GMT
+- request:
+    method: get
+    uri: https://www.darkstore.com/v1/api/delivery_rates?cart=%7B%22FB-FBQ0%22:1%7D&order=%7B%22zip%22:%2211101%22%7D&product_name=true
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Authorization:
+      - "<Authorization Code>"
+      User-Agent:
+      - Faraday v0.14.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Wed, 21 Feb 2018 16:03:08 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Set-Cookie:
+      - __cfduid=df2a4678811ba237694ea7e475093e7971519228988; expires=Thu, 21-Feb-19
+        16:03:08 GMT; path=/; domain=.darkstore.com; HttpOnly; Secure
+      X-Powered-By:
+      - Express
+      Access-Control-Allow-Origin:
+      - "*"
+      Etag:
+      - W/"1c7-Kslevn7Si34p12v1zf5ehEAGDKc"
+      Vary:
+      - Accept-Encoding
+      Via:
+      - 1.1 google
+      Alt-Svc:
+      - clear
+      Expect-Ct:
+      - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 3f0aef177c5d0e60-MXP
+    body:
+      encoding: UTF-8
+      string: '{"rates":[{"delivery":"Same Day","carrier":"TForce","service":"SameDayWhiteGlove","rate":31.95,"delivery_date":"02/21","order_date":"2018-02-21T00:00:00+00:00","priority":2,"darkstore_location":"New
+        York City - TForce","darkstore_id":9},{"delivery":"Same Day","carrier":"TForce","service":"SameDay","rate":21.95,"delivery_date":"02/21","order_date":"2018-02-21T00:00:00+00:00","priority":2,"darkstore_location":"New
+        York City - TForce","darkstore_id":9}]}'
+    http_version: 
+  recorded_at: Wed, 21 Feb 2018 16:03:08 GMT
+recorded_with: VCR 4.0.0
