@@ -30,6 +30,8 @@ module Darkstore
         connection.authorization :Bearer, token
         connection.request(:json)
         connection.request(:url_encoded)
+        connection.options.timeout = 5
+        connection.options.open_timeout = 2
 
         connection.adapter(Faraday.default_adapter)
       end
