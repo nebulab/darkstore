@@ -16,7 +16,7 @@ module Darkstore
     end
 
     def ok?
-      !response.nil? && response.status == 200
+      !response.nil? && response.status.between?(200, 206)
     end
 
     def json_response

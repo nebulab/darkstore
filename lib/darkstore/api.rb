@@ -6,16 +6,12 @@ module Darkstore
 
     private
 
-    def parse_json(params)
-      params.transform_values(&:to_json)
-    end
-
     def api_version
-      '/v1'
+      'v3'
     end
 
     def full_path(path)
-      "#{api_version}/api/#{path}"
+      "api/#{api_version}/#{path}"
     end
   end
 end

@@ -1,14 +1,14 @@
 module Darkstore
   class Orders < Api
-    def create(customer:, order:, product_name:, date:, cart:)
+    def post(line_items:, shipping_address:, email: nil, delivery: {}, delivery_instructions: nil)
       request(:post,
-              'customer_order',
+              'orders',
               body: {
-                customer: customer,
-                order: order,
-                product_name: product_name,
-                date: date,
-                cart: cart
+                line_items: line_items,
+                shipping_address: shipping_address,
+                email: email,
+                delivery: delivery,
+                delivery_instructions: delivery_instructions
               })
     end
   end
