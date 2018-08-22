@@ -1,12 +1,12 @@
 module Darkstore
   class Inventory < Api
-    def get(zip: nil, skus: nil, darkstore_id: nil, brands_ids: nil)
+    def get(zip: nil, sku_ids: nil, darkstore_ids: nil, brand_ids: nil)
       request(:get, 'inventory',
               params: {
                 zip: zip,
-                skus: skus,
-                darkstore_id: darkstore_id,
-                brands_ids: brands_ids
+                sku_ids: sku_ids,
+                darkstore_ids: darkstore_ids,
+                brand_ids: brand_ids
               })
     end
   end
