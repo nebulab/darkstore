@@ -6,23 +6,32 @@ module Darkstore
 
     def initialize(underlying_response: nil, error_summary: nil)
       @response = underlying_response
-
+      @body = @response&.body
       @error_summary = error_summary
-      @body = if error_summary.nil?
-                underlying_response.body
-              else
-                { error: error_summary }.to_json
-              end
+
+      handle_error_summary
     end
 
     def ok?
-      !response.nil? && response.status == 200
+      !response.nil? && response.status.between?(200, 206)
     end
 
     def json_response
       JSON.parse(body)
     rescue JSON::ParserError
       { error: "parse error" }
+    end
+
+    private
+
+    def handle_error_summary
+      return if ok?
+
+      if error_summary.nil? 
+        @error_summary = json_response["message"]
+      else
+        @body = { message: error_summary }.to_json
+      end
     end
   end
 end

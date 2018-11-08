@@ -27,7 +27,7 @@ module Darkstore
 
     def build_connection
       Faraday.new(url: base_url) do |connection|
-        connection.authorization :Bearer, token
+        connection.basic_auth(token, '')
         connection.request(:json)
         connection.request(:url_encoded)
         connection.options.timeout = 5

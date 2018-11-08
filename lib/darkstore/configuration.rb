@@ -7,7 +7,7 @@ module Darkstore
     def initialize
       @token    = ""
       @sandbox  = true
-      @endpoint = "https://www.darkstore.com/v1/api/"
+      @endpoint = "https://www.darkstore.com"
     end
   end
 end
