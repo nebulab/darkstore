@@ -45,4 +45,14 @@ RSpec.describe Darkstore::Orders, vcr: true do
       expect(subject.json_response.first).to include 'id'
     end
   end
+
+  describe '#cancel' do
+    let(:id) { 1 }
+
+    subject { described_class.new.cancel(id) }
+
+    it 'cancels the order from darkstore' do
+      expect(subject.ok?).to be_truthy
+    end
+  end
 end
