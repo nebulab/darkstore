@@ -1,0 +1,53 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://www.darkstore.com/api/v3/orders/1/cancel
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      Authorization:
+      - "<Authorization Code>"
+      User-Agent:
+      - Faraday v0.15.3
+      Content-Length:
+      - '0'
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 204
+      message: No Content
+    headers:
+      Date:
+      - Wed, 13 Feb 2019 15:17:00 GMT
+      Connection:
+      - keep-alive
+      Set-Cookie:
+      - __cfduid=dc12ad0ed1b571251e31a966d12a70c581550071020; expires=Thu, 13-Feb-20
+        15:17:00 GMT; path=/; domain=.darkstore.com; HttpOnly; Secure
+      X-Powered-By:
+      - Express
+      Access-Control-Allow-Origin:
+      - "*"
+      Etag:
+      - W/"2-vyGp6PvFo4RvsFtPoIWeCReyIC8"
+      Via:
+      - 1.1 google
+      Alt-Svc:
+      - clear
+      Expect-Ct:
+      - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 4a8842677ca76f4e-FCO
+    body:
+      encoding: UTF-8
+      string: ''
+    http_version:
+  recorded_at: Wed, 13 Feb 2019 15:17:01 GMT
+recorded_with: VCR 4.0.0

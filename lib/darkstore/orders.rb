@@ -12,5 +12,9 @@ module Darkstore
                 scheduled_fulfillment_date: scheduled_fulfillment_date
               })
     end
+
+    def cancel(id)
+      request(:post, "orders/#{id}/cancel")
+    end
   end
 end
